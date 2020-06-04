@@ -21,9 +21,9 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.SiswaViewHolder>() {
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SiswaViewHolder {
-        return DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_siswa, parent, false)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SiswaViewHolder = SiswaViewHolder(
+        DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_siswa, parent, false)
+    )
 
     override fun getItemCount(): Int = listData.size
 
